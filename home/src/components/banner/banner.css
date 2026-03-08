@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.bg {
+    background-image: url('../../assets/banner.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
