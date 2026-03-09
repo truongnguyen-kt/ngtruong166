@@ -7,7 +7,7 @@ export default function Header(props) {
     return (
         <header
             className={`h-full flex items-center justify-between px-10 border-b backdrop-blur-md
-            ${!props.darkMode ? "bg-gray-700 text-white border-gray-700" : "bg-blue-200/70 text-black border-gray-200"}`}
+            ${props.darkMode ? "bg-gray-700 text-white border-gray-700" : "bg-blue-200/70 text-black border-gray-200"}`}
         >
 
             {/* left - name */}
@@ -26,7 +26,7 @@ export default function Header(props) {
                     Trang chủ
                 </button>
 
-                {props.darkMode ? (
+                {!props.darkMode ? (
                     <button
                         className="flex items-center justify-center p-2 rounded-full transition duration-200 bg-gray-600 hover:bg-black"
                         onClick={props.toggleDarkMode}

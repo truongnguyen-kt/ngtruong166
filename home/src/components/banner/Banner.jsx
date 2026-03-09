@@ -11,7 +11,7 @@ export default function Banner(props) {
 
     return (
         <section
-            className={`relative h-[80vh]
+            className={`relative h-[90vh]
             flex flex-col items-center justify-center
             text-center overflow-hidden
             ${props.darkMode

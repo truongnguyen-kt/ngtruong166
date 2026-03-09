@@ -21,37 +21,44 @@ export default function Main(props) {
         {
             title: "Tra cứu Biển số xe",
             category: "Tiện ích",
-            image: "/projects/map.png"
+            image: "/projects/map.png",
+            url: "https://bien-so-xe.vercel.app/"
         },
         {
             title: "Tuan Note",
             category: "Productivity",
-            image: "/projects/note.png"
+            image: "/projects/note.png",
+            url: "https://tuan-note.vercel.app/"
         },
         {
             title: "Game Caro",
             category: "Game",
-            image: "/projects/caro.png"
+            image: "/projects/caro.png",
+            url: "https://game-caro.vercel.app/"
         }
     ]
 
     return (
-        <section className="py-20 px-6 bg-gradient-to-b from-white to-slate-100">
+        <section className={`pt-20 ${props.darkMode ? 'bg-gradient-to-b from-slate-900 to-slate-800' : 'bg-gradient-to-b from-white to-slate-200'}`}>
 
             {/* HEADER */}
             <div className="max-w-6xl mx-auto text-center mb-14">
 
-                <div className="inline-block px-4 py-1 mb-4 text-sm rounded-full
-                bg-purple-100 text-purple-600">
+                <div className={`inline-block px-4 py-1 mb-4 text-sm rounded-full 
+                ${props.darkMode ? 'bg-purple-100 text-purple-600' : 'bg-purple-600 text-purple-100'}`}>
                     📦 Danh sách dự án
                 </div>
 
-                <h2 className="text-5xl font-bold mb-4">
+                <h2 className={`text-5xl font-bold mb-4
+                    ${props.darkMode ? 'text-white' : 'text-slate-900'}
+                `}>
                     Các dự án của tôi
                 </h2>
 
-                <p className="text-slate-600 max-w-xl mx-auto">
-                    Khám phá các ứng dụng và công cụ hữu ích được xây dựng với tình yêu và sự tỉ mỉ
+                <p className={`text-slate-600 max-w-xl mx-auto
+                    ${props.darkMode ? 'text-white' : 'text-slate-900'}
+                `}>
+                    Khám phá các ứng dụng và công cụ hữu ích
                 </p>
 
             </div>
@@ -67,12 +74,13 @@ export default function Main(props) {
 
                     <input
                         type="text"
-                        placeholder="Tìm kiếm dự án..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="w-full pl-11 pr-4 py-3
+                        className={`w-full pl-11 pr-4 py-3
                         rounded-xl border border-slate-200
-                        focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        focus:outline-none focus:ring-2 focus:ring-purple-400
+                        ${props.darkMode ? 'text-white' : 'text-slate-900'}
+                        `}
                     />
 
                 </div>

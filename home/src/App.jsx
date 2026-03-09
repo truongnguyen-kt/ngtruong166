@@ -8,7 +8,6 @@ function App() {
   const [darkMode, setDarkMode] = useState(false)
 
   function toggleDarkMode() {
-    console.log("toggleDarkMode called", darkMode)
     setDarkMode(!darkMode)
   }
 
@@ -19,7 +18,7 @@ function App() {
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
       {/* banner */}
-      <div className='backdrop-blur-sm h-[85vh] z-0'>
+      <div className='backdrop-blur-sm h-[90vh] z-0'>
         <Banner darkMode={darkMode} numsOfProjects={5} numsOfCategories={3} />
       </div>
       {/* main */}
