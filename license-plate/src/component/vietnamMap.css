@@ -1,0 +1,25 @@
+.mapWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 420px;
+}
+
+.land {
+    fill: #e0e0e0;
+    stroke: #333;
+    stroke-width: 0.5;
+}
+
+.land:hover {
+    fill: orange;
+}
+
+.mapTools {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
